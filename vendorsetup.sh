@@ -10,7 +10,7 @@ sleep 1
 git clone https://github.com/Motorola-Edge-60-Fusion-Development/kernel_motorola_mt6878.git kernel/motorola/mt6878
 
 # Kernel
-git clone https://github.com/Notganesh/device_motorola_nice-kernel.git device/motorola/nice-kernel
+git clone https://github.com/Notganesh/android_device_motorola_nice-kernel.git device/motorola/nice-kernel
 
 # Hardware
 git clone https://github.com/Moto-MT6879-Dev/hardware_mediatek.git hardware/mediatek
