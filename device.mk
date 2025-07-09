@@ -137,7 +137,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    com.motorola.biometrics.fingerprint@1.0.vendor
+    android.hardware.biometrics.fingerprint@2.3-service.gdx
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -216,7 +216,7 @@ PRODUCT_COPY_FILES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.nice
+    android.hardware.light-service.nice
 
 # Media
 PRODUCT_COPY_FILES += \
