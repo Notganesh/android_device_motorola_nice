@@ -14,9 +14,9 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.touch@1.0-service.scout",
-    vintf_fragments: ["vendor.lineage.touch@1.0-service.scout.xml"],
-    init_rc: ["vendor.lineage.touch@1.0-service.scout.rc"],
+    name: "vendor.lineage.touch@1.0-service.nice",
+    vintf_fragments: ["vendor.lineage.touch@1.0-service.nice.xml"],
+    init_rc: ["vendor.lineage.touch@1.0-service.nice.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     proprietary: true,

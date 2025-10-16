@@ -39,16 +39,16 @@
             <Alias name="OMX.MTK.VIDEO.DECODER.AVC.secure" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="size" min="64x64" max="4096x2176" />
-            <!-- max 4096x2176@30 -->
-            <Limit name="block-count" range="16-34816" />
-            <Limit name="blocks-per-second" range="16-1044480" />
+            <Limit name="size" min="64x64" max="1920x1088" />
+            <!-- max 1920x1088@30 -->
+            <Limit name="block-count" range="16-8160" />
+            <Limit name="blocks-per-second" range="16-244800" />
             <Limit name="bitrate" range="1-100000000" />
             <Quirk name="wants-NAL-fragments" />
             <Feature name="secure-playback" required="true" />
             <Feature name="adaptive-playback"/>
             <Limit name="concurrent-instances" max="15" />
-            <Limit name="performance-point-3840x2160" value="30" />
+            <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
         <MediaCodec name="c2.mtk.hevc.decoder" type="video/hevc" >
             <Alias name="OMX.MTK.VIDEO.DECODER.HEVC" />
@@ -67,15 +67,15 @@
             <Alias name="OMX.MTK.VIDEO.DECODER.HEVC.secure" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="size" min="16x16" max="4096x2176" />
-            <!-- max 4096x2176@30 -->
-            <Limit name="block-count" range="1-34816" />
-            <Limit name="blocks-per-second" range="1-1044480" />
+            <Limit name="size" min="16x16" max="1920x1088" />
+            <!-- max 1920x1088@30 -->
+            <Limit name="block-count" range="1-8160" />
+            <Limit name="blocks-per-second" range="1-244800" />
             <Limit name="bitrate" range="1-100000000" />
             <Feature name="secure-playback" required="true" />
             <Feature name="adaptive-playback"/>
             <Limit name="concurrent-instances" max="15" />
-            <Limit name="performance-point-3840x2160" value="30" />
+            <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
         <MediaCodec name="c2.mtk.heif.decoder" type="image/vnd.android.heic" >
             <Alias name="OMX.MTK.VIDEO.DECODER.HEIF" />
@@ -101,16 +101,16 @@
             <Alias name="OMX.MTK.VIDEO.DECODER.VP9.secure" />
             <Limit name="alignment" value="1x1" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="size" min="16x16" max="4096x2176" />
-            <!-- max 4096x2176@30 -->
-            <Limit name="block-count" range="1-34816" />
-            <Limit name="blocks-per-second" range="1-1044480" />
+            <Limit name="size" min="16x16" max="1920x1088" />
+            <!-- max 1920x1088@30 -->
+            <Limit name="block-count" range="1-8160" />
+            <Limit name="blocks-per-second" range="1-244800" />
             <Limit name="bitrate" range="1-100000000" />
             <Quirk name="wants-NAL-fragments" />
             <Feature name="secure-playback" required="true" />
             <Feature name="adaptive-playback"/>
             <Limit name="concurrent-instances" max="15" />
-            <Limit name="performance-point-3840x2160" value="30" />
+            <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
     </Decoders>
     <Encoders>
@@ -124,6 +124,7 @@
             <Limit name="blocks-per-second" range="80-1044480" />
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="concurrent-instances" max="10" />
+            <Limit name="bitrate" range="1-100000000" />
             <Limit name="performance-point-3840x2160" value="30" />
         </MediaCodec>
         <MediaCodec name="c2.mtk.avc.encoder.secure" type="video/avc" >

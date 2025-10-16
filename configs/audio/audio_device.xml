@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <root>
     <card name="mt6878mt6369" />
-    <outputdevice name="RCV_OUT" path="I2S1"/>
     <mixercontrol>
         <versioncontrol value="1.01">
         </versioncontrol>
@@ -25,20 +24,35 @@
             <kctl name="HPL Mux" value="Open" />
         </path>
         <!--receiver output-->
-        <path name="RCV_OUT_DEVICE_CTRL_PRE_PMU" value="turnon">
-            <kctl name="aw_dev_1_switch" value="Disable" />
-            <kctl name="aw_dev_0_switch" value="Enable" />
-            <kctl name="aw_dev_0_prof" value="receiver" />
+        <path name="receiver_output" value="turnon">
+            <kctl name="DAC In Mux" value="Normal Path" />
+            <kctl name="RCV Mux" value="Voice Playback" />
+            <kctl name="SPK1 Ext AMP Mode" value="6" />
+            <kctl name="SPK1 Ext AMP Switch" value="1" />
         </path>
-        <path name="RCV_OUT_DEVICE_CTRL_PRE_PMU" value="turnoff">
-            <kctl name="aw_dev_1_switch" value="Enable" />
-            <kctl name="aw_dev_0_switch" value="Enable" />
-            <kctl name="aw_dev_0_prof" value="music" />
+        <path name="receiver_output" value="turnoff">
+            <kctl name="SPK1 Ext AMP Switch" value="0" />
+            <kctl name="SPK1 Ext AMP Mode" value="0" />
+            <kctl name="RCV Mux" value="Open" />
         </path>
        <!-- 2-in-1 speaker output-->
         <path name="two_in_one_speaker_output" value="turnon">
         </path>
         <path name="two_in_one_speaker_output" value="turnoff">
+        </path>
+        <!--dual analogPA speaker output-->
+        <path name="dual_speaker_output" value="turnon">
+            <kctl name="DAC In Mux" value="Normal Path" />
+            <kctl name="LOL Mux" value="Playback" />
+            <kctl name="RCV Mux" value="Voice Playback" />
+            <kctl name="SPK1 Ext AMP Switch" value="1" />
+            <kctl name="SPK2 Ext AMP Switch" value="1" />
+        </path>
+        <path name="dual_speaker_output" value="turnoff">
+            <kctl name="SPK1 Ext AMP Switch" value="0" />
+            <kctl name="SPK2 Ext AMP Switch" value="0" />
+            <kctl name="LOL Mux" value="Open" />
+            <kctl name="RCV Mux" value="Open" />
         </path>
        <!--speaker output-->
         <path name="speaker_output" value="turnon">
@@ -47,6 +61,20 @@
         </path>
         <path name="speaker_output" value="turnoff">
             <kctl name="LOL Mux" value="Open" />
+        </path>
+        <!--headhpone dual analogPA speaker output-->
+        <path name="headphoneDualSpeaker_output" value="turnon">
+            <kctl name="DAC In Mux" value="Normal Path" />
+            <kctl name="HPL Mux" value="Loud DualSPK Playback" />
+            <kctl name="HPR Mux" value="Loud DualSPK Playback" />
+            <kctl name="SPK1 Ext AMP Switch" value="1" />
+            <kctl name="SPK2 Ext AMP Switch" value="1" />
+        </path>
+        <path name="headphoneDualSpeaker_output" value="turnoff">
+            <kctl name="SPK1 Ext AMP Switch" value="0" />
+            <kctl name="SPK2 Ext AMP Switch" value="0" />
+            <kctl name="HPL Mux" value="Open" />
+            <kctl name="HPR Mux" value="Open" />
         </path>
         <!--headhpone_speaker output-->
         <path name="headphoneSpeaker_output" value="turnon">
@@ -208,18 +236,16 @@
             <kctl name="UL2_SRC_MUX" value="AMIC" />
         </path>
         <path name="builtin_Mic_DualMic" value="turnon">
-            <kctl name="MISO0_MUX" value="UL1_CH2" />
-            <kctl name="MISO1_MUX" value="UL1_CH1" />
+            <kctl name="MISO0_MUX" value="UL1_CH1" />
+            <kctl name="MISO1_MUX" value="UL1_CH2" />
             <kctl name="ADC_L_Mux" value="Left Preamplifier" />
             <kctl name="PGA_L_Mux" value="AIN0" />
             <kctl name="ADC_R_Mux" value="Right Preamplifier" />
             <kctl name="PGA_R_Mux" value="AIN2" />
-            <kctl name="DMIC0_MUX" value="DMIC_DATA1_L_1" />
-            <kctl name="DMIC1_MUX" value="DMIC_DATA0" />
+            <kctl name="DMIC0_MUX" value="DMIC_DATA0" />
+            <kctl name="DMIC1_MUX" value="DMIC_DATA1_L_1" />
         </path>
         <path name="builtin_Mic_DualMic" value="turnoff">
-            <kctl name="MISO0_MUX" value="UL1_CH1" />
-            <kctl name="MISO1_MUX" value="UL1_CH2" />
             <kctl name="ADC_L_Mux" value="Idle" />
             <kctl name="ADC_R_Mux" value="Idle" />
             <kctl name="PGA_L_Mux" value="None" />
@@ -992,7 +1018,7 @@
             <kctl name="UL1_CH1 DL2_CH1" value="1" />
             <kctl name="UL1_CH2 DL2_CH2" value="1" />
             <kctl name="UL1_CH1 DL3_CH1" value="1" />
-            <kctl name="UL1_CH2 DL3_CH2" value="1" />
+            <kctl name="UL1_CH2 DL3_CH2" value="1" />
             <kctl name="UL1_CH1 DL1_CH1" value="1" />
             <kctl name="UL1_CH2 DL1_CH2" value="1" />
             <kctl name="UL1_CH1 DL_24CH_CH1" value="1" />

@@ -4,7 +4,7 @@
 //
 
 cc_library_static {
-    name: "power-ext-scout",
+    name: "power-ext-nice",
     defaults: ["android.hardware.power-ndk_shared"],
     vendor: true,
     srcs: [

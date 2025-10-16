@@ -15,6 +15,12 @@
 -->
 
 <MediaCodecs>
+    <Settings>
+        <!-- disable TV and telephony domains by default. These must be opted in by OEMs -->
+        <Domain name="telephony" enabled="false" />
+        <Domain name="tv" enabled="false" />
+        <Variant name="slow-cpu" enabled="false" />
+    </Settings>
     <Decoders>
         <MediaCodec name="c2.android.avc.decoder" type="video/avc" update="true">
             <Alias name="OMX.google.h264.decoder" />

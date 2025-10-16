@@ -15,10 +15,10 @@
 // limitations under the License.
 
 rust_binary {
-    name: "android.hardware.lights-service.scout",
+    name: "android.hardware.lights-service.nice",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.lights.scout.rc"],
-    vintf_fragments: ["android.hardware.lights.scout.xml"],
+    init_rc: ["android.hardware.lights.nice.rc"],
+    vintf_fragments: ["android.hardware.lights.nice.xml"],
     vendor: true,
     rustlibs: [
         "liblogger",

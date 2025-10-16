@@ -23,7 +23,7 @@ use binder::BinderFeatures;
 mod lights;
 use lights::LightsService;
 
-const LOG_TAG: &str = "android.hardware.lights-service.scout";
+const LOG_TAG: &str = "android.hardware.lights-service.nice";
 
 use log::LevelFilter;
 
