@@ -1,4 +1,4 @@
-# fastboot-info for scout
+# fastboot-info for nice
 version 1
 flash init_boot
 flash --apply-vbmeta vbmeta

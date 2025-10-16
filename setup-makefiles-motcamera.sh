@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=scout-motcamera
+DEVICE=nice-motcamera
 VENDOR=motorola
 
 # Load extract_utils and do some sanity checks

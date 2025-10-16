@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_scout.mk
+    $(LOCAL_DIR)/yaap_nice.mk

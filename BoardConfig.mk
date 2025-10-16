@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/scout
+DEVICE_PATH := device/motorola/nice
 
 # A/B
 AB_OTA_UPDATER := true
@@ -47,7 +47,7 @@ TARGET_DYNAMIC_64_32_MEDIASERVER := true
 ZYGOTE_FORCE_64 := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := scout
+TARGET_BOOTLOADER_BOARD_NAME := nice
 TARGET_NO_BOOTLOADER := true
 
 # Build
@@ -214,5 +214,5 @@ WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{STA}, 1}, {{NAN}, 1}}
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # Inherit the proprietary files
-include vendor/motorola/scout/BoardConfigVendor.mk
-include vendor/motorola/scout-motcamera/BoardConfigVendor.mk
+include vendor/motorola/nice/BoardConfigVendor.mk
+include vendor/motorola/nice-motcamera/BoardConfigVendor.mk
