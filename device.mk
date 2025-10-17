@@ -313,4 +313,3 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/nice/nice-vendor.mk)
-$(call inherit-product, vendor/motorola/nice-motcamera/nice-motcamera-vendor.mk)
