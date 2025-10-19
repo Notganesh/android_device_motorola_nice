@@ -1,1 +1,1 @@
-# android_device_motorola_scout
+# android_device_motorola_nice

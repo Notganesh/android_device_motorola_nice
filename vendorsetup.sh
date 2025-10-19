@@ -8,7 +8,7 @@ echo -e "${color}Applying patches${end}"
 sleep 1
 
 # Kernel
-git clone https://github.com/Notganesh/android_device_motorola_nice.git device/motorola/nice-kernel
+git clone https://github.com/Notganesh/android_device_motorola_nice-kernel.git device/motorola/nice-kernel
 
 # Hardware
 git clone https://github.com/Moto-MT6879-Dev/hardware_mediatek.git hardware/mediatek
