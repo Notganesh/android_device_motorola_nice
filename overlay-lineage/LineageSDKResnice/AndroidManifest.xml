@@ -4,7 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lineageos.platform.overlay.lineage.scout">
+    package="lineageos.platform.overlay.lineage.nice">
 
     <overlay
         android:isStatic="true"

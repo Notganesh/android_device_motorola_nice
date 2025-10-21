@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/scout
+DEVICE_PATH := device/motorola/nice
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -216,7 +216,7 @@ PRODUCT_COPY_FILES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.scout
+    android.hardware.lights-service.nice
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -253,18 +253,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    FrameworkResOverlayscout \
-    SettingsResOverlayscout \
-    SystemUIOverlayscout \
+    FrameworkResOverlaynice \
+    SettingsResOverlaynice \
+    SystemUIOverlaynice \
     TetheringConfigOverlay \
     WifiOverlay \
     EuiccOverlay \
-    SecureElementOverlayscout
+    SecureElementOverlaynice
 
 PRODUCT_PACKAGES += \
-    LineageApertureOverlayscout \
-    LineageDialerscout \
-    LineageSDKResscout
+    LineageApertureOverlaynice \
+    LineageDialernice \
+    LineageSDKResnice
 
 # Power
 PRODUCT_PACKAGES += \
@@ -279,7 +279,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):power-ext-scout)
+$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):power-ext-nice)
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -300,7 +300,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.1-service.scout-multihal
+    android.hardware.sensors@2.1-service.nice-multihal
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
@@ -336,4 +336,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/motorola/scout/scout-vendor.mk)
+$(call inherit-product, vendor/motorola/nice/nice-vendor.mk)

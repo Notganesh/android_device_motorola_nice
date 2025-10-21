@@ -15,8 +15,15 @@
 -->
 
 <MediaCodecs>
+    <Settings>
+        <!-- disable TV and telephony domains by default. These must be opted in by OEMs -->
+        <Domain name="telephony" enabled="false" />
+        <Domain name="tv" enabled="false" />
+        <Variant name="slow-cpu" enabled="false" />
+    </Settings>
     <Decoders>
         <MediaCodec name="c2.android.avc.decoder" type="video/avc" update="true">
+            <Alias name="OMX.google.h264.decoder" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
             <Limit name="size" min="2x2" max="1920x1088" />
@@ -27,6 +34,7 @@
             <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="c2.android.hevc.decoder" type="video/hevc" update="true">
+            <Alias name="OMX.google.hevc.decoder" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="8x8" />
             <Limit name="size" min="2x2" max="1920x1088" />
@@ -37,6 +45,7 @@
             <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="c2.android.vp8.decoder" type="video/x-vnd.on2.vp8" update="true">
+            <Alias name="OMX.google.vp8.decoder" />
             <Limit name="size" min="2x2" max="2048x2048" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -47,6 +56,7 @@
             <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="c2.android.vp9.decoder" type="video/x-vnd.on2.vp9" update="true">
+            <Alias name="OMX.google.vp9.decoder" />
             <Limit name="alignment" value="1x1" />
             <Limit name="block-size" value="16x16" />
             <Limit name="size" min="2x2" max="1280x1280" />
@@ -77,6 +87,7 @@
     </Decoders>
     <Encoders>
         <MediaCodec name="c2.android.h263.encoder" type="video/3gpp" update="true">
+            <Alias name="OMX.google.h263.encoder" />
             <!-- profiles and levels:  ProfileBaseline : Level45 -->
             <Limit name="size" min="176x144" max="176x144" />
             <Limit name="alignment" value="16x16" />
@@ -84,6 +95,7 @@
             <Attribute name="software-codec" />
         </MediaCodec>
         <MediaCodec name="c2.android.mpeg4.encoder" type="video/mp4v-es" update="true">
+            <Alias name="OMX.google.mpeg4.encoder" />
             <!-- profiles and levels:  ProfileCore : Level2 -->
             <Limit name="size" min="16x16" max="176x144" />
             <Limit name="alignment" value="16x16" />
@@ -92,6 +104,7 @@
             <Limit name="bitrate" range="1-64000" />
         </MediaCodec>
         <MediaCodec name="c2.android.avc.encoder" type="video/avc" update="true">
+            <Alias name="OMX.google.h264.encoder" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
             <Limit name="size" min="16x16" max="1808x1808" />
@@ -102,6 +115,7 @@
             <Feature name="intra-refresh" />
         </MediaCodec>
         <MediaCodec name="c2.android.vp8.encoder" type="video/x-vnd.on2.vp8" update="true">
+            <Alias name="OMX.google.vp8.encoder" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
             <Limit name="size" min="2x2" max="720x720" />
@@ -126,6 +140,7 @@
             <Attribute name="software-codec" />
         </MediaCodec>
         <MediaCodec name="c2.android.vp9.encoder" type="video/x-vnd.on2.vp9" update="true" enabled="false">
+            <Alias name="OMX.google.vp9.encoder" />
             <!-- profiles and levels:  ProfileMain : Level_Version0-3 -->
             <Limit name="size" min="2x2" max="2048x2048" />
             <Limit name="alignment" value="2x2" />

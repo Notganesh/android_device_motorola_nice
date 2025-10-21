@@ -18,7 +18,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/motorola/scout',
+    'device/motorola/nice',
     'hardware/mediatek/libmtkperf_client',
     'hardware/mediatek',
     'hardware/motorola',
@@ -131,11 +131,11 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so'),
 
     'vendor/etc/init/thermal-mediatek.rc': blob_fixup()
-        .regex_replace('android.hardware.thermal-service.mediatek', 'android.hardware.thermal-service.mediatek.scout'),
+        .regex_replace('android.hardware.thermal-service.mediatek', 'android.hardware.thermal-service.mediatek.nice'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'scout',
+    'nice',
     'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

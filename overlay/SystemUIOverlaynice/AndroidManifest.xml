@@ -5,11 +5,11 @@
   SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settings.overlay.scout">
+    package="com.android.systemui.overlay.nice">
 
     <application android:hasCode="false" />
     <overlay
-      android:targetPackage="com.android.settings"
+      android:targetPackage="com.android.systemui"
       android:isStatic="true"
-      android:priority="1"/>
+      android:priority="100"/>
 </manifest>

@@ -5,7 +5,7 @@
 
 
 runtime_resource_overlay {
-    name: "SystemUIOverlayscout",
+    name: "FrameworkResOverlaynice",
     resource_dirs: ["res"],
     vendor: true,
 }

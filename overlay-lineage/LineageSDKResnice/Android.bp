@@ -3,9 +3,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-
 runtime_resource_overlay {
-    name: "FrameworkResOverlayscout",
-    resource_dirs: ["res"],
-    vendor: true,
+    name: "LineageSDKResnice",
+    product_specific: true,
 }

@@ -14,9 +14,9 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.light-service.scout",
-    init_rc: ["android.hardware.light-service.scout.rc"],
-    vintf_fragments: ["android.hardware.light-service.scout.xml"],
+    name: "android.hardware.light-service.nice",
+    init_rc: ["android.hardware.light-service.nice.rc"],
+    vintf_fragments: ["android.hardware.light-service.nice.xml"],
     relative_install_path: "hw",
     srcs: [
         "main.cpp",
