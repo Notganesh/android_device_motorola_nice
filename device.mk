@@ -137,7 +137,9 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.gdx \
+    com.motorola.biometrics.fingerprint@1.0.vendor
+
+#PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.egis
 
 PRODUCT_COPY_FILES += \

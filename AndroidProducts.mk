@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_nice.mk
+    $(LOCAL_DIR)/yaap_nice.mk
